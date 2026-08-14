@@ -1,0 +1,9 @@
+{
+  "name": "Tedware",
+  "short_name": "Tedware",
+  "description": "Independent software, app and game development from the Netherlands.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#111816",
+  "theme_color": "#111816"
+}
