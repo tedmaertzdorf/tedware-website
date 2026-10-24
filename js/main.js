@@ -4,10 +4,8 @@
   const STORAGE_KEY = 'tedware-language';
   const DEFAULT_LANGUAGE = 'en';
 
-  // Replace this single placeholder before launch. The site only creates mailto
-  // links when the value looks like a real address, so the draft cannot open a
-  // broken or invented contact destination.
-  const CONTACT_EMAIL = 'CONTACT_EMAIL_HERE';
+  // Confirmed public support mailbox, managed by Ted Maertzdorf.
+  const CONTACT_EMAIL = 'support.tedware@gmail.com';
 
   const translations = window.TEDWARE_TRANSLATIONS || {};
   const supportedLanguages = Object.keys(translations);

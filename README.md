@@ -150,3 +150,10 @@ Commit en push die wijziging en laat Search Console daarna verifiëren. Plaats n
 - vergelijk het definitieve privacybeleid met het werkelijke appgedrag en de storeverklaringen.
 
 De website wordt door deze repository niet automatisch gepubliceerd.
+
+
+## Kitty Catwalk, 24 oktober 2026
+
+De routes `kitty-catwalk/privacy/` en `kitty-catwalk/support/` zijn definitieve EN/NL-pagina’s voor de huidige releasevoorbereiding. Exploitant en mailboxbeheerder: Ted Maertzdorf, merk Tedware, support.tedware@gmail.com. De eigenaar bevestigde bewaring tot 12 maanden na afhandeling met noodzakelijke wettelijke uitzonderingen en kerndoelgroep 5 jaar en jonger. CloudKit staat uit. Een publicatie van deze pagina’s betekent geen apprelease of goedkeuring van Production-betalingen. De bestaande algemene privacytemplate voor Killdoku blijft afzonderlijk.
+
+Validatie: `node scripts/validate-site.mjs`, `node scripts/test-i18n.mjs`, `node scripts/test-kitty.mjs`. Controleer beide talen en directe routes op mobiel en desktop.

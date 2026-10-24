@@ -36,7 +36,10 @@ function createElement(dataset = {}) {
     hidden: false,
     setAttribute: (name, value) => attributes.set(name, String(value)),
     getAttribute: (name) => attributes.get(name),
-    removeAttribute: (name) => attributes.delete(name),
+    removeAttribute(name) {
+      attributes.delete(name);
+      if (name === 'hidden') this.hidden = false;
+    },
     addEventListener: (name, callback) => listeners.set(name, callback),
     click: () => listeners.get('click')?.(),
     focus: () => {},
@@ -105,7 +108,7 @@ const firstVisit = runScenario();
 assert(firstVisit.documentElement.lang === 'en', 'First visit must default to English.');
 assert(firstVisit.text.textContent === 'Software, apps and games built with care.', 'English content was not applied.');
 assert(!firstVisit.saved.has('tedware-language'), 'First visit must not create an unnecessary preference.');
-assert(firstVisit.contactLink.hidden === true && !firstVisit.contactLink.href, 'The contact placeholder must not become a link.');
+assert(firstVisit.contactLink.hidden === false && firstVisit.contactLink.href === 'mailto:support.tedware@gmail.com', 'The confirmed support mailbox must be available.');
 
 firstVisit.dutchButton.click();
 assert(firstVisit.documentElement.lang === 'nl', 'Manual Dutch selection did not update the document language.');
